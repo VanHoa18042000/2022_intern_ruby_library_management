@@ -30,7 +30,8 @@ vi:
     check1: "Are you sure ?"
     cancel: "Hủy"
     yes_delete: "Có , Xóa nó!"
-    delete_icon: "Deleted!"
+    delete_icon: "Đã xóa"
+    update: "Đã xập nhật"
   user_login:
     error_login: "Tên đăng nhập hoặc mật khẩu không đúng"
     is_login: "Bạn cần đăng nhập"
@@ -70,3 +71,34 @@ vi:
     like: "Yêu thích"
     books_cancel: "Sách đã trả"
     books: "Sách đã mượn"
+  close: "Đóng"
+  male: "Nam"
+  female: "Nữ"
+  name: "Tên"
+  gender: "Giới tính"
+  birthday: "Ngày sinh"
+  description: "Mô tả"
+  other: "Khác"
+  submit: "Gửi"
+  action: "Hành động"
+  image: "Ảnh"
+  user_login:
+    error_login: "Tên đăng nhập hoặc mật khẩu không đúng"
+  admin:
+    authors:
+      index:
+        author: "Tác giả"
+        list_author: "Danh sách tác giả"
+      show:
+        author_detail: "Chi tiết tác giả"
+        not_found_author: "Không tìm thấy tác giả"
+        create_author: "Thêm mới tác giả"
+        update_author: "Chỉnh sửa tác giả"
+      destroy:
+        deleted: "Đã xoá tac gia sách"
+        deleted_fails: "Xoá tac gia sách thất bại"
+      create:
+        created: "Thêm mới tác giả thành công"
+      update:
+        updated: "Cập nhật tác giả thành công"
+      updated_fails: "Cập nhật tác giả thất bại"

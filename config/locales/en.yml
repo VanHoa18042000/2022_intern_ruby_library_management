@@ -70,3 +70,31 @@ en:
     like: "Like"
     books_cancel: "Paid books"
     books: "books"
+  close: "Close"
+  male: "Male"
+  female: "Female"
+  name: "Name"
+  gender: "Gender"
+  birthday: "Birthday"
+  description: "Description"
+  other: "Other"
+  submit: "Submit"
+  action: "Action"
+  image: "Image"
+  user_login:
+    error_login: "invalid username or password"
+admin:
+  authors:
+    index:
+      author: "Author"
+      list_author: "List author"
+    show:
+      author_detail: "Detail Author"
+      not_found_author: "Can't found author"
+      create_author: "Add new author"
+    destroy:
+      deleted: "Delete author successfuly"
+      deleted_fails: "Delete author faild"
+    update:
+      updated: "Update author successfuly"
+      updated_fails: "Update author faild"

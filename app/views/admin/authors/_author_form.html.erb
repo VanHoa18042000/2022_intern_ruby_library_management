@@ -1,0 +1,48 @@
+<%= form_with(model: [:admin, @author], id: "author_form", local: false) do |f| %>
+  <div class="card mb-0">
+    <div class="card-body">
+      <div class="mb-4">
+        <%= f.label :name, t("name"), { class: "form-label text-bold" } %>
+        <%= f.text_field :name, { class: "form-control" , placeholder: t("name") } %>
+      </div>
+
+      <div class="mb-4">
+        <%= f.label :gender, t("gender"), { class: "form-label text-bold" } %>
+        <div class="box-gender">
+          <div>
+            <%= f.radio_button :gender, Settings.gender.male, checked: true %>
+            <%= f.label :gender, t("male")%>
+          </div>
+          <div>
+            <%= f.radio_button :gender, Settings.gender.female %>
+            <%= f.label :gender, t("female")%>
+          </div>
+          <div>
+            <%= f.radio_button :gender, Settings.gender.other %>
+            <%= f.label :gender, t("other")%>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <%= f.label :dob, t("birthday"), { class: "form-label text-bold" } %>
+        <%= f.date_field :dob, class: "form-control" %>
+      </div>
+
+      <div class="mb-4">
+        <%= f.label :image, t("image"), { class: "form-label text-bold" } %>
+        <div id="author_image_preview">
+          <%= image_tag f.object.image if f.object.image.attached? %>
+        </div>
+        <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png", class: "form-control" %>
+      </div>
+
+      <div class="mb-4">
+        <%= f.label :description, t("description"), { class: "form-label text-bold" } %>
+        <%= f.text_area :description, class: "form-control", rows: 4 , placeholder: t("description") %>
+      </div>
+
+      <%= f.submit t("submit") , class: "btn btn-primary btn-submit-author" %>
+    </div>
+  </div>
+  <% end %>

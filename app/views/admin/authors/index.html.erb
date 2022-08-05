@@ -1,0 +1,84 @@
+<div class="pcoded-main-container">
+  <div class="pcoded-wrapper">
+    <div class="pcoded-content">
+      <div class="pcoded-inner-content">
+        <div class="page-header">
+          <div class="page-block">
+            <div class="row align-items-center">
+              <div class="col-md-12">
+                <div class="page-header-title">
+                  <h5 class="m-b-10"><%= t ".author_list" %></h5>
+                </div>
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <%= link_to admin_home_path do %>
+                        <i class="feather icon-home"></i>
+                    <% end %>
+                  </li>
+                  <li class="breadcrumb-item"><%= link_to t(".author"), admin_authors_path %></li>
+                  <li class="breadcrumb-item"><%= t ".author_list" %></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-body">
+          <div class="page-wrapper">
+            <div class="row">
+              <div class="col-xl-12">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="box-button mt-2">
+                      <%= link_to t(".create_author"), new_admin_author_path,
+                        class: "btn btn-icon btn-primary",
+                        remote: true %>
+                    </div>
+                  </div>
+                  <div class="card-body table-border-style">
+                    <div class="table-responsive">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th style="width: 5%;">
+                              STT
+                            </th>
+                            <th style="width: 20%;">
+                              <%= t "name" %>
+                            </th>
+                            <th style="width: 20%;">
+                              <%= t "image" %>
+                            </th>
+                            <th style="width: 9%;">
+                              <%= t "gender" %>
+                            </th>
+                            <th style="width: 18%;">
+                              <%= t "description" %>
+                            </th>
+                            <th style="width: 10%;">
+                              <%= t "birthday" %>
+                            </th>
+                            <th style="width: 20%;">
+                              <%= t "action" %>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody id="contentTableAuthor">
+                          <%= render "author" %>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div id="pagyAuthor">
+                      <%== pagy_nav @pagy %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render "modal" %>

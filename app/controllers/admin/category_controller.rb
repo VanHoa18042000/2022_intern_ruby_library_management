@@ -1,4 +1,5 @@
 class Admin::CategoryController < AdminController
+  before_action :logged_in_user
   before_action :find_category, except: %i(index new create)
 
   def index

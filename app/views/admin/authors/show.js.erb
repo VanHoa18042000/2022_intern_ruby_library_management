@@ -1,0 +1,3 @@
+$("#modalLiveLabel").html("<%= I18n.t('admin.authors.show.author_detail') %>");
+$(".modal-body").html("<%= j render 'author_detail', author: @author %>");
+$("#modalLive").modal("show");

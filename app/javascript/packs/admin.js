@@ -17,7 +17,7 @@ require("admin/sweetalert2.min")
 //= require i18n/translations
 require("admin/pcoded.min")
 require("admin/index.min")
+require("admin/author")
 
 Turbolinks.start()
 ActiveStorage.start()
-

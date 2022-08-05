@@ -111,3 +111,41 @@
     line-height: 63px;
   }
 }
+
+.text-bold {
+  font-weight: bold;
+}
+
+.box-gender {
+  & > div {
+    margin-right: 1rem;
+  }
+}
+
+.author_image {
+  width: 120px;
+  height: 80px;
+}
+
+#author_image_preview {
+  text-align: center;
+
+  & > img {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+}
+
+.box-author-detail{
+  padding: 1rem 2rem;
+
+  &__item {
+    margin-bottom: 1rem;
+
+    strong {
+      margin-right: 5px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<% if @author.errors.any? %>
+    toastr.error("<%= @author.errors.first.full_message %>", "", {"closeButton": true})
+<% else %>
+  $("#contentTableAuthor").html("<%= j render 'author' %>")
+  if("<%= action === 'create' %>" === "true"){
+    toastr.success(I18n.admin.authors.create.created, "", {"closeButton": true})
+  }else{
+    toastr.success(I18n.admin.authors.update.updated, "", {"closeButton": true})
+  }
+  $("#modalLive").modal("hide")
+<% end %>

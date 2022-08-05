@@ -15,5 +15,6 @@ require("admin/sweetalert2.min")
 //= require i18n/translations
 require("login/main")
 require("admin/index.min")
+
 Turbolinks.start()
 ActiveStorage.start()
