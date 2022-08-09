@@ -82,6 +82,8 @@ vi:
   submit: "Gửi"
   action: "Hành động"
   image: "Ảnh"
+  order: "Yêu cầu mượn sách"
+  status: "Trạng thái"
   user_login:
     error_login: "Tên đăng nhập hoặc mật khẩu không đúng"
   admin:
@@ -102,3 +104,8 @@ vi:
       update:
         updated: "Cập nhật tác giả thành công"
       updated_fails: "Cập nhật tác giả thất bại"
+    orders:
+      note_user: "Ghi chú"
+      note_admin: "Lời nhắc"
+      date_start: "Ngày mượn"
+      date_return: "Ngày trả"

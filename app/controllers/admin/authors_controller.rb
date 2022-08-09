@@ -1,6 +1,5 @@
 class Admin::AuthorsController < ApplicationController
   layout "admin"
-
   # before_action :logged_in_user
   before_action :find_by_id, only: %i(show destroy edit update)
 

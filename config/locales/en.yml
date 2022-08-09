@@ -81,6 +81,7 @@ en:
   submit: "Submit"
   action: "Action"
   image: "Image"
+  order: "Order"
   user_login:
     error_login: "invalid username or password"
 admin:
@@ -98,3 +99,8 @@ admin:
     update:
       updated: "Update author successfuly"
       updated_fails: "Update author faild"
+  orders:
+    note_user: "Note Order"
+    note_admin: "Reminder"
+    date_start: "Start date"
+    date_return: "Return date"

@@ -1,0 +1,31 @@
+<tr>
+  <td>
+    <%= order_counter + 1 %>
+  </td>
+  <td>
+    <%= order.user.name %>
+  </td>
+  <td>
+    <%= render_approval order.approval %>
+  </td>
+  <td>
+    <%= order.note_user %>
+  </td>
+  <td>
+    <%= order.note_admin %>
+  </td>
+  <td>
+    <%= show_datetime(order.date_start) %>
+  </td>
+  <td>
+    <%= show_datetime(order.date_return) %>
+  </td>
+  <td>
+    <%= link_to admin_order_path(order),
+        class: "btn btn-icon btn-success",
+        data: { bs_toggle: "modal", bs_target: "#modalLive" },
+        remote: true do %>
+          <i class="fas fa-eye"></i>
+        <% end %>
+  </td>
+</tr>

@@ -1,8 +1,9 @@
 user:
   password_minimum: 3
   email_regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i'
-  name_max: 20
+  name_max: 30
   email_max: 30
+  avatar_default: "/assets/user/avatar.png"
 book:
   min: 3
 category:
@@ -20,3 +21,5 @@ gender:
   other: 2
 max_page_category: 8
 max_page_user: 8
+order:
+  max_page: 6

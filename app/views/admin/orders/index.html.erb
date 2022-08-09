@@ -1,4 +1,4 @@
-<% provide :title, t(".list_author") %>
+<% provide :title, t(".list_order") %>
 <div class="pcoded-main-container">
   <div class="pcoded-wrapper">
     <div class="pcoded-content">
@@ -16,8 +16,8 @@
                         <i class="feather icon-home"></i>
                     <% end %>
                   </li>
-                  <li class="breadcrumb-item"><%= link_to t(".author"), admin_authors_path %></li>
-                  <li class="breadcrumb-item"><%= t ".author_list" %></li>
+                  <li class="breadcrumb-item"><%= link_to t(".order"), admin_orders_path %></li>
+                  <li class="breadcrumb-item"><%= t ".order_list" %></li>
                 </ul>
               </div>
             </div>
@@ -30,7 +30,7 @@
                 <div class="card">
                   <div class="card-header">
                     <div class="box-button mt-2">
-                      <%= link_to t(".create_author"), new_admin_author_path,
+                      <%= link_to t(".create_order"), new_admin_author_path,
                         class: "btn btn-icon btn-primary",
                         remote: true %>
                     </div>
@@ -40,35 +40,38 @@
                       <table class="table table-hover">
                         <thead>
                           <tr>
-                            <th style="width: 5%;">
+                            <th style="width: 3%;">
                               STT
                             </th>
                             <th style="width: 20%;">
-                              <%= t "name" %>
+                              <%= t "user" %>
                             </th>
-                            <th style="width: 20%;">
-                              <%= t "image" %>
+                            <th style="width: 13%;">
+                              <%= t "status" %>
                             </th>
-                            <th style="width: 9%;">
-                              <%= t "gender" %>
+                            <th style="width: 15%;">
+                              <%= t "admin.orders.note_user" %>
                             </th>
-                            <th style="width: 18%;">
-                              <%= t "description" %>
+                            <th style="width: 15%;">
+                              <%= t "admin.orders.note_admin" %>
+                            </th>
+                            <th style="width: 12%;">
+                              <%= t "admin.orders.date_start" %>
+                            </th>
+                            <th style="width: 12%;">
+                              <%= t "admin.orders.date_return" %>
                             </th>
                             <th style="width: 10%;">
-                              <%= t "birthday" %>
-                            </th>
-                            <th style="width: 20%;">
                               <%= t "action" %>
                             </th>
                           </tr>
                         </thead>
-                        <tbody id="contentTableAuthor">
-                          <%= render "author" %>
+                        <tbody id="contentTableOrder">
+                          <%= render @orders %>
                         </tbody>
                       </table>
                     </div>
-                    <div id="pagyAuthor">
+                    <div id="pagyOrder">
                       <%== pagy_nav @pagy %>
                     </div>
                   </div>
